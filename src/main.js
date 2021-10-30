@@ -22,7 +22,7 @@ const render = () => {
             <div class="site">
                 <div class="logo">${node.logo}</div>
                 <div class="link">${simplifyUrl(node.url)}</div>
-                <dic class="close">
+                <div class="close">
                     <svg class="icon">
                         <use xlink:href="#icon-close"></use>
                     </svg>
@@ -32,7 +32,7 @@ const render = () => {
         $li.on('click', () => {
             window.open(node.url)
         })
-        $li.on('click', 'close', (e) => {
+        $li.on('click', '.close', (e) => {
             e.stopPropagation()
             hashMap.splice(index, 1)
             render()
